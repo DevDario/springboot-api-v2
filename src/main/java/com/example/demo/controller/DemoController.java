@@ -25,6 +25,12 @@ public class DemoController{
         return demoService.helloWorld("Dev");
     }
 
+    /**
+     * @param id
+     * @param filter
+     * @param body
+     * @return user name, id and selected filter
+     */
     @PostMapping("/{id}")
     public String helloWorldPost(@PathVariable String id, @RequestParam(defaultValue="none") String filter, @RequestBody User body){
         return "Hello, " + body.getName() + " \n Your ID is ->> " + id
